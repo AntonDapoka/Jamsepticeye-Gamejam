@@ -5,7 +5,6 @@ public class MovementSwitcher : MonoBehaviour
     [Header("References")]
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject ghost;
-    [SerializeField] private PlayerSwitchCollider playerSwitchCollider;
     [SerializeField] private GhostSwitchCollider ghostSwitchCollider;
     [SerializeField] private GhostPassableEnviromentSwitcher enviromentSwitcher;
 

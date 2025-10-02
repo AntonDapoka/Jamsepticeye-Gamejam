@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class HealthBar : MonoBehaviour
 {
     [SerializeField] private Health playerHealth;
-    [SerializeField] private Image[] hearts; // Массив UI Image для каждого сердца
+    [SerializeField] private Image[] hearts;
     [SerializeField] private Sprite fullHeart;
     [SerializeField] private Sprite emptyHeart;
 

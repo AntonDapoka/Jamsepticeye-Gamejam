@@ -2,14 +2,14 @@ using UnityEngine;
 
 public class Lever : MonoBehaviour
 {
-    [SerializeField] private GameObject thirdObject; // Объект, который нужно удалить
-    [SerializeField] private KeyCode interactKey = KeyCode.E; // Клавиша взаимодействия
+    [SerializeField] private GameObject thirdObject; 
+    [SerializeField] private KeyCode interactKey = KeyCode.E; 
     [SerializeField]  private bool playerInRange = false;
     private bool isActivated = false;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.GetComponent<GhostMovement>()!=null) // Игрок заходит в зону
+        if (other.GetComponent<GhostMovement>()!=null) 
         {
             playerInRange = true;
         }
@@ -17,7 +17,7 @@ public class Lever : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.GetComponent<GhostMovement>() != null) // Игрок выходит из зоны
+        if (other.GetComponent<GhostMovement>() != null) 
         {
             playerInRange = false;
         }
@@ -35,10 +35,9 @@ public class Lever : MonoBehaviour
     {
         isActivated = true;
 
-        // Повернём рычаг на 180 градусов
         transform.rotation = Quaternion.Euler(0f, 0f, 230f);
 
-        // Удалим третий объект
+
         if (thirdObject != null)
         {
             Destroy(thirdObject);

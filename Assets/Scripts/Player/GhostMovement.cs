@@ -9,9 +9,9 @@ public class GhostMovement : MonoBehaviour
     private Animator anim;
 
     [Header("Movement Settings")]
-    [SerializeField] private float acceleration = 20f; // как быстро ускоряется при нажатии
-    [SerializeField] private float maxSpeed = 6f;      // максимальная скорость
-    [SerializeField] private float friction = 5f;      // насколько быстро замедляется при отпускании кнопки
+    [SerializeField] private float acceleration = 20f; 
+    [SerializeField] private float maxSpeed = 6f;      
+    [SerializeField] private float friction = 5f;      
     private Vector2 moveInput = Vector2.zero;
 
     private void Awake()
