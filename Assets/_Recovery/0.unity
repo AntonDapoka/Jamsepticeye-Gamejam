@@ -395,14 +395,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 107880e1a5c4c72458fdf71d5a653951, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CharacterMovement
-  speed: 7
+  speed: 5
   airSpeedCoef: 1.2
-  jumpForce: 100
-  gravityScale: 3
-  fallingGravityScale: 4
+  jumpForce: 10
+  gravityScale: 7
+  fallingGravityScale: 10
   maxHorizontalSpeed: 8
   maxVerticalSpeed: 20
-  extraHeight: 0.07
+  extraHeight: 5.95
 --- !u!95 &2068864910
 Animator:
   serializedVersion: 7
