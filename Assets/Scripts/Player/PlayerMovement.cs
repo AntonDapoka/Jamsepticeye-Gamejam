@@ -3,7 +3,7 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(CapsuleCollider2D))]
 [RequireComponent(typeof(Animator))]
-public class CharacterMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     [Header("Components")]
     private Rigidbody2D rb;
@@ -79,7 +79,6 @@ public class CharacterMovement : MonoBehaviour
 
     private void ClampVelocity()
     {
-        // Используй rb.velocity (не rb.linearVelocity)
         float clampedX = Mathf.Clamp(rb.linearVelocity.x, -maxHorizontalSpeed, maxHorizontalSpeed);
         float clampedY = Mathf.Clamp(rb.linearVelocity.y, -maxVerticalSpeed, maxVerticalSpeed);
         rb.linearVelocity = new Vector2(clampedX, clampedY);
