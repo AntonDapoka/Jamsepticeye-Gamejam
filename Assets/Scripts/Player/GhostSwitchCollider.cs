@@ -6,7 +6,7 @@ public class GhostSwitchCollider : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.GetComponent<PlayerMovement>() != null)
+        if (other.GetComponent<PlayerSwitchCollider>() != null)
         {
             isOnTriggerEnterPlayer = true;
         }
@@ -14,7 +14,7 @@ public class GhostSwitchCollider : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.GetComponent<PlayerMovement>() != null)
+        if (other.GetComponent<PlayerSwitchCollider>() != null)
         {
             isOnTriggerEnterPlayer = false; 
         }

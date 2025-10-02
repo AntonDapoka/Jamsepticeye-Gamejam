@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BlockGhost : MonoBehaviour
+public class PlayerSwitchCollider : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

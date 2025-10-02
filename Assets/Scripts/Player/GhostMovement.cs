@@ -19,8 +19,6 @@ public class GhostMovement : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         rb.gravityScale = 0f;
-
-        
     }
 
     private void Update()
@@ -61,10 +59,9 @@ public class GhostMovement : MonoBehaviour
     {
         if (rb != null)
         {
-            rb.linearVelocity = Vector2.zero; // обнуляем текущую скорость
+            rb.linearVelocity = Vector2.zero;
         }
-
-        moveInput = Vector2.zero;       // сбрасываем ввод, чтобы скольжение не продолжалось
+        moveInput = Vector2.zero;
     }
 }
 

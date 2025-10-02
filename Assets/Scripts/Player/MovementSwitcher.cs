@@ -2,73 +2,128 @@ using UnityEngine;
 
 public class MovementSwitcher : MonoBehaviour
 {
+    [Header("References")]
     [SerializeField] private GameObject player;
-    private Rigidbody2D playerRb;
     [SerializeField] private GameObject ghost;
+    [SerializeField] private PlayerSwitchCollider playerSwitchCollider;
+    [SerializeField] private GhostSwitchCollider ghostSwitchCollider;
+    [SerializeField] private GhostPassableEnviromentSwitcher enviromentSwitcher;
+
+    [Header("Controls")]
+    [SerializeField] private KeyCode switchKey = KeyCode.E;
+
+    // Кэш компонентов
+    private Rigidbody2D playerRb;
     private Rigidbody2D ghostRb;
-    private PlayerMovement PM;
-    private GhostMovement GM;
+    private PlayerMovement playerMovement;
+    private GhostMovement ghostMovement;
     private CapsuleCollider2D playerCollider;
     private CapsuleCollider2D ghostCollider;
-    [SerializeField] private GhostSwitchCollider ghostSwitchCollider;
-    [SerializeField] private bool isGhost = false;
-    private float playerGravityScale;
 
-    private void Start()
+    private bool isGhost = false;
+    //private float playerGravityScale;
+
+    private void Awake()
     {
-        PM = player.GetComponent<PlayerMovement>();
-        GM = ghost.GetComponent<GhostMovement>();
-        playerCollider = player.GetComponent<CapsuleCollider2D>();
-        ghostCollider = ghost.GetComponent<CapsuleCollider2D>();
+        if (player == null || ghost == null)
+        {
+            enabled = false;
+            return;
+        }
+
         playerRb = player.GetComponent<Rigidbody2D>();
         ghostRb = ghost.GetComponent<Rigidbody2D>();
+        playerMovement = player.GetComponent<PlayerMovement>();
+        ghostMovement = ghost.GetComponent<GhostMovement>();
+        playerCollider = player.GetComponent<CapsuleCollider2D>();
+        ghostCollider = ghost.GetComponent<CapsuleCollider2D>();
 
-        ghostCollider.enabled = false;
-        playerCollider.enabled = true;
+        //playerGravityScale = playerRb != null ? playerRb.gravityScale : 1f;
 
-        playerGravityScale = playerRb.gravityScale;
+        InitializeState();
+    }
+
+    private void InitializeState()
+    {
+        isGhost = false;
+
+        if (playerMovement != null) playerMovement.enabled = true;
+        if (ghostMovement != null) ghostMovement.enabled = false;
+
+        if (playerCollider != null) { playerCollider.enabled = true; playerCollider.isTrigger = false; }
+        if (ghostCollider != null) { ghostCollider.enabled = false; ghostCollider.isTrigger = true; }
+
+        if (ghostRb != null) ghostRb.bodyType = RigidbodyType2D.Kinematic;
+        if (ghost != null) ghost.transform.SetParent(player.transform);
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E)) 
+        if (Input.GetKeyDown(switchKey))
+            TryToggle();
+    }
+
+    private void TryToggle()
+    {
+        if (!isGhost)
         {
-            if (isGhost == false)
-            {
-                isGhost = true;
-                PM.enabled = false;
-                GM.enabled = true;
-                ghostRb.bodyType = RigidbodyType2D.Dynamic;
-                ghost.transform.SetParent(null);
+            EnterGhost();
+            return;
+        }
 
-
-                ghostCollider.isTrigger = false;
-                playerCollider.isTrigger = true;
-                ghostCollider.enabled = true;
-
-
-                playerRb.gravityScale = 0f;
-                Debug.Log(playerRb.gravityScale);
-            }
-            else if (ghostSwitchCollider.IsOnTriggerEnterPlayer())
-            {
-                isGhost = false;
-                PM.enabled = true;
-                GM.enabled = false;
-
-                ghostRb.bodyType = RigidbodyType2D.Kinematic;
-                ghost.transform.SetParent(player.transform);
-                ghost.transform.localPosition = new Vector3(0f,0f, -1f);
-                ghost.transform.localRotation = Quaternion.identity;
-
-                GM.StopMovement();
-
-                ghostCollider.isTrigger = true;
-                playerCollider.isTrigger = false;
-                ghostCollider.enabled = false;
-                playerRb.gravityScale = playerGravityScale;
-            }
-                
+        if (ghostSwitchCollider != null && ghostSwitchCollider.IsOnTriggerEnterPlayer())
+        {
+            ExitGhost();
         }
     }
+
+    private void EnterGhost()
+    {
+        isGhost = true;
+
+
+        if (playerMovement != null) playerMovement.enabled = false;
+        if (ghostMovement != null) ghostMovement.enabled = true;
+
+        if (ghostRb != null) ghostRb.bodyType = RigidbodyType2D.Dynamic;
+        if (ghost != null) ghost.transform.SetParent(null);
+
+        playerMovement.StopMovement();
+
+        if (ghostCollider != null) { ghostCollider.enabled = true; ghostCollider.isTrigger = false; }
+        //if (playerCollider != null) playerCollider.isTrigger = true;
+
+        //if (playerRb != null) playerRb.gravityScale = 0f;
+
+        enviromentSwitcher?.EnableTriggers();
+    }
+
+    private void ExitGhost()
+    {
+        isGhost = false;
+
+        if (playerMovement != null) playerMovement.enabled = true;
+        if (ghostMovement != null) ghostMovement.enabled = false;
+
+        if (ghostRb != null) ghostRb.bodyType = RigidbodyType2D.Kinematic;
+
+        if (ghost != null)
+        {
+            ghost.transform.SetParent(player.transform);
+            ghost.transform.localPosition = new Vector3(0f, 0f, -1f);
+            ghost.transform.localRotation = Quaternion.identity;
+        }
+
+        ghostMovement.StopMovement();
+
+        if (ghostCollider != null) { ghostCollider.isTrigger = true; ghostCollider.enabled = false; }
+        if (playerCollider != null) playerCollider.isTrigger = false;
+
+        //if (playerRb != null) playerRb.gravityScale = playerGravityScale;
+
+        enviromentSwitcher?.DisableTriggers();
+    }
+
+    public void ForceEnterGhost() => EnterGhost();
+    public void ForceExitGhost() => ExitGhost();
 }

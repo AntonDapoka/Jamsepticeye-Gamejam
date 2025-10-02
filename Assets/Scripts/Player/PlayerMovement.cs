@@ -22,7 +22,6 @@ public class PlayerMovement : MonoBehaviour
     [Header("Ground Check")]
     [SerializeField] private float extraHeight = 0.07f;
 
-    // state
     private Vector2 moveInput = Vector2.zero;
     private bool jumpRequest = false;
     public int direction { get; private set; } = 1;
@@ -44,7 +43,6 @@ public class PlayerMovement : MonoBehaviour
         {
             jumpRequest = true;
         }
-
         //FlipSprite();
     }
 
@@ -119,6 +117,15 @@ public class PlayerMovement : MonoBehaviour
         }
 
         return false;
+    }
+
+    public void StopMovement()
+    {
+        if (rb != null)
+        {
+            rb.linearVelocity = Vector2.zero;
+        }
+        moveInput = Vector2.zero;
     }
 
     private void OnDrawGizmosSelected()
