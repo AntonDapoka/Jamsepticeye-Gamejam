@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -24,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector2 moveInput = Vector2.zero;
     private bool jumpRequest = false;
+    private bool coyote = false;
+    private bool startCoyote = false;
     public int direction { get; private set; } = 1;
 
     private void Awake()
@@ -53,6 +56,21 @@ public class PlayerMovement : MonoBehaviour
         ClampVelocity();
     }
 
+    private void CoyoteTime() {
+        if (IsGrounded()) startCoyote = true;
+        if (!coyote && startCoyote && !IsGrounded()) {
+            startCoyote= false;
+            StartCoroutine(CoyoteWindow());
+        }
+    }
+
+    private IEnumerator CoyoteWindow()
+    {
+        coyote = true;
+        yield return new WaitForSeconds(0.125f);
+        coyote = false;
+    }
+
     private void HandleMovement()
     {
         float currentSpeed = IsGrounded() ? speed : speed * airSpeedCoef;
@@ -64,7 +82,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleJumpAndGravity()
     {
-        if (jumpRequest && IsGrounded())
+        CoyoteTime();
+        if (jumpRequest && (IsGrounded() || coyote))
         {
             Vector2 vel = rb.linearVelocity;
             vel.y = jumpForce; // rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);

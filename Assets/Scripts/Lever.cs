@@ -4,12 +4,12 @@ public class Lever : MonoBehaviour
 {
     [SerializeField] private GameObject thirdObject; 
     [SerializeField] private KeyCode interactKey = KeyCode.E; 
-    [SerializeField]  private bool playerInRange = false;
+    [SerializeField] private bool playerInRange = false;
     private bool isActivated = false;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.GetComponent<GhostMovement>()!=null) 
+        if (other.GetComponent<GhostMovement>()!=null) // странная проверка ну ладно
         {
             playerInRange = true;
         }

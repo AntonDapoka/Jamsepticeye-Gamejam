@@ -330,7 +330,8 @@ MonoBehaviour:
   player: {fileID: 2068864908}
   ghost: {fileID: 1231226457}
   ghostSwitchCollider: {fileID: 637867655}
-  isGhost: 0
+  enviromentSwitcher: {fileID: 0}
+  switchKey: 101
 --- !u!1 &580996919
 GameObject:
   m_ObjectHideFlags: 0
@@ -1275,7 +1276,7 @@ Transform:
   m_GameObject: {fileID: 1916811019}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 3.39, y: -3, z: 0}
+  m_LocalPosition: {x: 0.03, y: -6.67, z: 0}
   m_LocalScale: {x: 10, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
