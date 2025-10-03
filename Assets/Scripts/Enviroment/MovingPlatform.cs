@@ -96,7 +96,7 @@ public class MovingPlatform : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.GetComponent<PlayerSwitchCollider>() != null || collision.gameObject.GetComponent<PlayerMovement>() != null)
+        if ( collision.gameObject.GetComponent<PlayerMovement>() != null)//collision.gameObject.GetComponent<PlayerSwitchCollider>() != null ||
         {
             collision.gameObject.transform.SetParent(transform);
         }
@@ -104,7 +104,7 @@ public class MovingPlatform : MonoBehaviour
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.GetComponent<PlayerSwitchCollider>() != null || collision.gameObject.GetComponent<PlayerMovement>() != null)
+        if ( collision.gameObject.GetComponent<PlayerMovement>() != null)//collision.gameObject.GetComponent<PlayerSwitchCollider>() != null ||
         {
             collision.gameObject.transform.SetParent(null);
         }

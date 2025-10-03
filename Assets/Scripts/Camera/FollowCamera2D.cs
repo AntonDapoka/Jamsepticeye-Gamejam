@@ -125,6 +125,10 @@ namespace CustomCamera
                     tempVec.y = Mathf.Clamp(tempVec.y, lowerBound + vertExtent, upperBound - vertExtent);
                 }
 
+                float unitsPerPixel = 1f / camera.pixelRect.height * (camera.orthographicSize * 2f);
+                tempVec.x = Mathf.Round(tempVec.x / unitsPerPixel) * unitsPerPixel;
+                tempVec.y = Mathf.Round(tempVec.y / unitsPerPixel) * unitsPerPixel;
+
                 tempVec.z = transform.position.z;
 
                 transform.position = tempVec;
