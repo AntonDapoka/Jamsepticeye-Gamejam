@@ -3,13 +3,12 @@ using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(CapsuleCollider2D))]
-[RequireComponent(typeof(Animator))]
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Components")]
     private Rigidbody2D rb;
     private CapsuleCollider2D cc;
-    private Animator anim;
+    [SerializeField] private Animator anim;
 
     [Header("Movement Settings")]
     [SerializeField] private float speed = 6f;
@@ -33,7 +32,6 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         cc = GetComponent<CapsuleCollider2D>();
-        anim = GetComponent<Animator>();
 
         rb.gravityScale = gravityScale;
     }

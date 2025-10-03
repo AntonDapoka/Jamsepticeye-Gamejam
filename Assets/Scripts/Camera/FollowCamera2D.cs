@@ -15,6 +15,7 @@ namespace CustomCamera
 
     public class FollowCamera2D : MonoBehaviour
     {
+                [SerializeField] private Camera camera;
         [SerializeField] private Transform target;
         [SerializeField] private float dampTime = 0.15f;
         [SerializeField] private Direction followType = Direction.Horizontal;
@@ -35,7 +36,7 @@ namespace CustomCamera
         [SerializeField] private float upperDeadBound = 0;
         [SerializeField] private float lowerDeadBound = 0;
 
-        private Camera camera;
+
         private Vector3 velocity = Vector3.zero;
         private float vertExtent;
         private float horzExtent;
@@ -50,7 +51,6 @@ namespace CustomCamera
 
         private void Start()
         {
-            camera = GetComponent<Camera>();
             vertExtent = camera.orthographicSize;
             horzExtent = vertExtent * Screen.width / Screen.height;
             deltaCenterVec = camera.ViewportToWorldPoint(new Vector3(0.5f, 0.5f, 0))
@@ -126,6 +126,7 @@ namespace CustomCamera
                 }
 
                 tempVec.z = transform.position.z;
+
                 transform.position = tempVec;
             }
         }
