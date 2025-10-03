@@ -3,7 +3,8 @@ using UnityEngine;
 
 public class GhostPassableEnviromentSwitcher : MonoBehaviour
 {
-    private List<Collider2D> colliders2D = new List<Collider2D>();
+    private readonly List<Collider2D> passColliders = new List<Collider2D>();
+    private readonly List<Collider2D> nonPassColliders = new List<Collider2D>();
 
     private void Start()
     {
@@ -12,36 +13,60 @@ public class GhostPassableEnviromentSwitcher : MonoBehaviour
 
     private void CollectColliders()
     {
-        colliders2D.Clear();
-
-        var ghosts = FindObjectsByType<GhostCanPass>(FindObjectsSortMode.None);
+        passColliders.Clear();
+        nonPassColliders.Clear();
 
         var set = new HashSet<Collider2D>();
 
-        foreach (var g in ghosts)
+        // GhostCanPass
+        var passGhosts = FindObjectsByType<GhostCanPass>(FindObjectsSortMode.None);
+        foreach (var g in passGhosts)
         {
             if (g == null) continue;
             foreach (var c in g.GetComponents<Collider2D>())
             {
                 if (c != null && set.Add(c))
-                    colliders2D.Add(c);
+                    passColliders.Add(c);
+            }
+        }
+
+        // GhostCanNotPass
+        var nonPassGhosts = FindObjectsByType<GhostCanNotPass>(FindObjectsSortMode.None);
+        foreach (var g in nonPassGhosts)
+        {
+            if (g == null) continue;
+            foreach (var c in g.GetComponents<Collider2D>())
+            {
+                if (c != null && set.Add(c))
+                    nonPassColliders.Add(c);
             }
         }
     }
 
-    public void EnableTriggers()
+    public void EnableGhostMode()
     {
-        for (int i = 0; i < colliders2D.Count; i++)
+        for (int i = 0; i < passColliders.Count; i++)
         {
-            if (colliders2D[i] != null) colliders2D[i].isTrigger = true;
+            if (passColliders[i] != null) passColliders[i].isTrigger = true;
+        }
+
+        for (int i = 0; i < nonPassColliders.Count; i++)
+        {
+            if (nonPassColliders[i] != null) nonPassColliders[i].isTrigger = false;
         }
     }
-    public void DisableTriggers()
+    public void DisableGhostMode()
     {
-        for (int i = 0; i < colliders2D.Count; i++)
+        for (int i = 0; i < passColliders.Count; i++)
         {
-            if (colliders2D[i] != null) colliders2D[i].isTrigger = false;
+            if (passColliders[i] != null) passColliders[i].isTrigger = false;
+        }
+
+        for (int i = 0; i < nonPassColliders.Count; i++)
+        {
+            if (nonPassColliders[i] != null) nonPassColliders[i].isTrigger = true;
         }
     }
+
     public void Refresh() => CollectColliders();
 }

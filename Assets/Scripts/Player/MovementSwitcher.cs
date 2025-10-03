@@ -94,10 +94,10 @@ public class MovementSwitcher : MonoBehaviour
 
         //if (playerRb != null) playerRb.gravityScale = 0f;
 
-        enviromentSwitcher?.EnableTriggers();
+        enviromentSwitcher?.EnableGhostMode();
     }
 
-    private void ExitGhost()
+    public void ExitGhost()
     {
         isGhost = false;
 
@@ -120,7 +120,7 @@ public class MovementSwitcher : MonoBehaviour
 
         //if (playerRb != null) playerRb.gravityScale = playerGravityScale;
 
-        enviromentSwitcher?.DisableTriggers();
+        enviromentSwitcher?.DisableGhostMode();
     }
 
     public void ForceEnterGhost() => EnterGhost();
