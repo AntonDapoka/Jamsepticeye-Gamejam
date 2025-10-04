@@ -3160,14 +3160,13 @@ MonoBehaviour:
   player: {fileID: 5329884266002374753}
   ghost: {fileID: 2921185478423687547}
   ghostSwitchCollider: {fileID: 7820662670434343729}
-  playerswitchcol: {fileID: 435400255}
   enviromentSwitcher: {fileID: 456888372}
   PSA: {fileID: 568471756}
   GSA: {fileID: 1407320196}
   switchKey: 101
   Lava:
     serializedVersion: 2
-    m_Bits: 4096
+    m_Bits: 0
 --- !u!1 &568471752
 GameObject:
   m_ObjectHideFlags: 0
@@ -4631,7 +4630,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 1
+  m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -6388,8 +6387,8 @@ Transform:
   m_GameObject: {fileID: 1054634339}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.5023, y: -4.6, z: 0}
-  m_LocalScale: {x: 6.6707883, y: 2.7705, z: 1}
+  m_LocalPosition: {x: 4.52, y: -4.6, z: 0}
+  m_LocalScale: {x: 5, y: 2.7705, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 951079442}
@@ -13080,7 +13079,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.07321971, y: 0.24894613}
   m_Size: {x: 1.7468399, y: 2.4978945}
   m_Direction: 0
 --- !u!1 &2921185478423687547
@@ -13138,8 +13137,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.1, y: 0}
-  m_Size: {x: 1, y: 3}
+  m_Offset: {x: 0.070427656, y: -0.03961563}
+  m_Size: {x: 0.8151269, y: 2.9067578}
   m_Direction: 0
 --- !u!114 &3251566128503189157
 MonoBehaviour:
@@ -13166,11 +13165,7 @@ Transform:
   m_GameObject: {fileID: 5329884266002374753}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-<<<<<<< HEAD:Assets/Scenes/AntonScene.unity
   m_LocalPosition: {x: -5.94, y: -34.02, z: 0}
-=======
-  m_LocalPosition: {x: -5.55, y: 0, z: 0}
->>>>>>> baton:Assets/Scenes/New Scene.unity
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13331,7 +13326,7 @@ CapsuleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 1.0000001, y: 2}
+  m_Size: {x: 1.0000001, y: 2.0000002}
   m_Direction: 0
 --- !u!212 &5230907775284065406
 SpriteRenderer:
@@ -13441,9 +13436,9 @@ Transform:
   m_GameObject: {fileID: 4416208742465846946}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.1, y: 0.25, z: 0}
-  m_LocalScale: {x: 2, y: 1.55, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalPosition: {x: -0.1356, y: 0.2646, z: 0}
+  m_LocalScale: {x: 2.4990964, y: 1.8904233, z: 1.5}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 4501519144628914282}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -13457,8 +13452,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.0683, y: 0.1145, z: 0}
-  m_LocalScale: {x: 1.18, y: 1.6493747, z: 1.35}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 1.733046, y: 1.6493747, z: 1.35}
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 3298909033882869222}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
