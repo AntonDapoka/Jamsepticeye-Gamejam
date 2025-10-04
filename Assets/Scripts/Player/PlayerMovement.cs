@@ -30,6 +30,7 @@ public class PlayerMovement : MonoBehaviour
     private bool wasGrounded = false; // для детекции приземления
     private bool coyote = false;
     private bool startCoyote = false;
+    [SerializeField] public static bool facingRight = true;
     public int direction { get; private set; } = 1;
 
     private void Awake()
@@ -52,10 +53,12 @@ public class PlayerMovement : MonoBehaviour
         if (Input.GetAxis("Horizontal") < 0)
         {
             PSA.FlipSprite(1);
+            facingRight = false;
         }
         if (Input.GetAxis("Horizontal") > 0)
         {
             PSA.FlipSprite(-1);
+            facingRight = true;
         }
 
         wasGrounded = IsGrounded();
@@ -67,8 +70,9 @@ public class PlayerMovement : MonoBehaviour
         HandleJumpAndGravity();
         ClampVelocity();
         UpdateAnimations();
+        CoyoteTime();
     }
-    /*
+
     private void CoyoteTime() {
         if (IsGrounded()) startCoyote = true;
         if (!coyote && startCoyote && !IsGrounded()) {
@@ -83,7 +87,7 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(0.05f);
         coyote = false;
     }
-    */
+
     private void HandleMovement()
     {
         float currentSpeed = IsGrounded() ? speed : speed * airSpeedCoef;
@@ -101,7 +105,6 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleJumpAndGravity()
     {
-        //CoyoteTime();
         if (jumpRequest && (IsGrounded() || coyote))
         {
             Vector2 vel = rb.linearVelocity;
@@ -110,6 +113,7 @@ public class PlayerMovement : MonoBehaviour
             PSA.SetJumpAnimation();
         }
         jumpRequest = false;
+        startCoyote = false;
 
         rb.gravityScale = rb.linearVelocity.y >= 0f ? gravityScale : fallingGravityScale;
     }
