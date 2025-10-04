@@ -3,15 +3,15 @@ using UnityEngine;
 public class Lever : MonoBehaviour
 {
     [SerializeField] private GameObject thirdObject; 
-    [SerializeField] private KeyCode interactKey = KeyCode.E; 
-    [SerializeField] private bool playerInRange = false;
+    [SerializeField] private KeyCode interactKey = KeyCode.T; 
+    [SerializeField] private bool isOnTriggerEnterGhost = false;
     private bool isActivated = false;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.GetComponent<GhostMovement>()!=null) // странная проверка ну ладно
+        if (other.GetComponent<GhostMovement>()!=null)
         {
-            playerInRange = true;
+            isOnTriggerEnterGhost = true;
         }
     }
 
@@ -19,13 +19,13 @@ public class Lever : MonoBehaviour
     {
         if (other.GetComponent<GhostMovement>() != null) 
         {
-            playerInRange = false;
+            isOnTriggerEnterGhost = false;
         }
     }
 
     private void Update()
     {
-        if (playerInRange && !isActivated && Input.GetKeyDown(interactKey))
+        if (isOnTriggerEnterGhost && Input.GetKeyDown(interactKey))
         {
             ActivateLever();
         }
@@ -33,14 +33,14 @@ public class Lever : MonoBehaviour
 
     private void ActivateLever()
     {
-        isActivated = true;
+        isActivated = !isActivated;
 
-        transform.rotation = Quaternion.Euler(0f, 0f, 230f);
+        transform.rotation = Quaternion.Euler(0f, 0f, isActivated ? 45f:-45f);
 
 
         if (thirdObject != null)
         {
-            Destroy(thirdObject);
+            thirdObject.SetActive(!thirdObject.activeSelf);
         }
     }
 }
