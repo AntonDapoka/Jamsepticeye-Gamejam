@@ -26,6 +26,7 @@ public class MovementSwitcher : MonoBehaviour
     static (float, float) var = (0, 0);
     private (float,float)[] speed = {var, var};
     public LayerMask Lava;
+    public LayerMask Spikes;
     private bool facingRight = true;
 
     private bool isGhost = false;
@@ -69,7 +70,7 @@ public class MovementSwitcher : MonoBehaviour
     {
         speed[1] = speed[0];
         speed[0].Item1 = playerRb.linearVelocityX; speed[0].Item2 = playerRb.linearVelocityY;
-        if (Input.GetKeyDown(switchKey)|| (Physics2D.OverlapPoint(playerCollider.transform.position, Lava) && !isGhost))
+        if (Input.GetKeyDown(switchKey) || (Physics2D.OverlapPoint(playerCollider.transform.position, Lava) && !isGhost) || (playerMovement.GetIsOnTriggerEnterSpikes() && !isGhost))
             TryToggle();
     }
 

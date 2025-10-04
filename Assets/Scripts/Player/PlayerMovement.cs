@@ -1,4 +1,5 @@
 using System.Collections;
+using Unity.Burst.CompilerServices;
 using Unity.VisualScripting;
 using UnityEngine;
 using static UnityEditor.VersionControl.Asset;
@@ -30,6 +31,7 @@ public class PlayerMovement : MonoBehaviour
     private bool wasGrounded = false; // для детекции приземления
     private bool coyote = false;
     private bool startCoyote = false;
+    private bool isOnTriggerEnterSpikes = false;
     [SerializeField] public static bool facingRight = true;
     public int direction { get; private set; } = 1;
 
@@ -176,6 +178,27 @@ public class PlayerMovement : MonoBehaviour
             rb.linearVelocity = Vector2.zero;
         }
         moveInput = Vector2.zero;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.GetComponent<Spikes>() != null)
+        {
+            isOnTriggerEnterSpikes = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.GetComponent<Spikes>() != null)
+        {
+            isOnTriggerEnterSpikes = false;
+        }
+    }
+
+    public bool GetIsOnTriggerEnterSpikes()
+    {
+        return isOnTriggerEnterSpikes;
     }
 
     private void OnDrawGizmosSelected()

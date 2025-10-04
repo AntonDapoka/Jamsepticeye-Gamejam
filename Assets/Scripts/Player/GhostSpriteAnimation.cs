@@ -1,5 +1,6 @@
 using UnityEngine;
 
+[RequireComponent(typeof(Animator))]
 public class GhostSpriteAnimation : MonoBehaviour
 {
     public void FlipSprite(int direction)
