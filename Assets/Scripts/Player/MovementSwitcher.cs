@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class MovementSwitcher : MonoBehaviour
@@ -18,6 +19,10 @@ public class MovementSwitcher : MonoBehaviour
     private GhostMovement ghostMovement;
     private CapsuleCollider2D playerCollider;
     private CapsuleCollider2D ghostCollider;
+
+    static (float, float) var = (0, 0);
+    private (float,float)[] speed = {var, var};
+    public LayerMask Lava;
 
     private bool isGhost = false;
     //private float playerGravityScale;
@@ -58,7 +63,9 @@ public class MovementSwitcher : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(switchKey))
+        speed[1] = speed[0];
+        speed[0].Item1 = playerRb.linearVelocityX; speed[0].Item2 = playerRb.linearVelocityY;
+        if (Input.GetKeyDown(switchKey)|| (Physics2D.OverlapPoint(playerCollider.transform.position, Lava) && !isGhost))
             TryToggle();
     }
 
@@ -95,6 +102,7 @@ public class MovementSwitcher : MonoBehaviour
         //if (playerRb != null) playerRb.gravityScale = 0f;
 
         enviromentSwitcher?.EnableGhostMode();
+        ghostRb.AddForce(new Vector2(speed[1].Item1*30, speed[1].Item2*25+150f)); 
     }
 
     public void ExitGhost()

@@ -65,7 +65,7 @@ public class PlayerMovement : MonoBehaviour
     private IEnumerator CoyoteWindow()
     {
         coyote = true;
-        yield return new WaitForSeconds(0.125f);
+        yield return new WaitForSeconds(0.1f);
         coyote = false;
     }
 

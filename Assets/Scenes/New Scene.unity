@@ -1309,7 +1309,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 240924562}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: LavaHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2540,6 +2540,9 @@ MonoBehaviour:
   ghostSwitchCollider: {fileID: 7820662670434343729}
   enviromentSwitcher: {fileID: 456888372}
   switchKey: 101
+  Lava:
+    serializedVersion: 2
+    m_Bits: 4096
 --- !u!1 &568471752
 GameObject:
   m_ObjectHideFlags: 0
@@ -3131,7 +3134,7 @@ GameObject:
   - component: {fileID: 693632432}
   - component: {fileID: 693632434}
   - component: {fileID: 693632433}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: LavaCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3169,7 +3172,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -3478,7 +3481,7 @@ GameObject:
   - component: {fileID: 766678995}
   - component: {fileID: 766678997}
   - component: {fileID: 766678996}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: LavaCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4149,7 +4152,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 844395171}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: LavaHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4771,7 +4774,7 @@ GameObject:
   - component: {fileID: 917435138}
   - component: {fileID: 917435140}
   - component: {fileID: 917435139}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: LavaCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4809,7 +4812,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -4907,7 +4910,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 943146759}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: LavaHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4939,7 +4942,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 951079442}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: LavaHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5423,7 +5426,7 @@ GameObject:
   - component: {fileID: 1054634342}
   - component: {fileID: 1054634341}
   - component: {fileID: 1054634343}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: LavaCollider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5461,7 +5464,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 128
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
@@ -10873,7 +10876,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2104752668}
-  m_Layer: 0
+  m_Layer: 12
   m_Name: LavaHolder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10931,7 +10934,7 @@ CapsuleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.99999994, y: 1.9999999}
+  m_Size: {x: 1, y: 1.9999999}
   m_Direction: 0
 --- !u!114 &623615935934828949
 MonoBehaviour:
@@ -11122,7 +11125,7 @@ CapsuleCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2176
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
