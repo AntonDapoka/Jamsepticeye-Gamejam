@@ -1,5 +1,7 @@
 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
+using static UnityEditor.VersionControl.Asset;
 
 [RequireComponent(typeof(Rigidbody2D))]
 [RequireComponent(typeof(CapsuleCollider2D))]
@@ -8,7 +10,8 @@ public class PlayerMovement : MonoBehaviour
     [Header("Components")]
     private Rigidbody2D rb;
     private CapsuleCollider2D cc;
-    [SerializeField] private Animator anim;
+    [SerializeField] private PlayerSpriteAnimation PSA;
+
 
     [Header("Movement Settings")]
     [SerializeField] private float speed = 6f;
@@ -24,6 +27,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Vector2 moveInput = Vector2.zero;
     private bool jumpRequest = false;
+    private bool wasGrounded = false; // для детекции приземления
     private bool coyote = false;
     private bool startCoyote = false;
     public int direction { get; private set; } = 1;
@@ -44,7 +48,17 @@ public class PlayerMovement : MonoBehaviour
         {
             jumpRequest = true;
         }
-        //FlipSprite();
+
+        if (Input.GetAxis("Horizontal") < 0)
+        {
+            PSA.FlipSprite(1);
+        }
+        if (Input.GetAxis("Horizontal") > 0)
+        {
+            PSA.FlipSprite(-1);
+        }
+
+        wasGrounded = IsGrounded();
     }
 
     private void FixedUpdate()
@@ -52,8 +66,9 @@ public class PlayerMovement : MonoBehaviour
         HandleMovement();
         HandleJumpAndGravity();
         ClampVelocity();
+        UpdateAnimations();
     }
-
+    /*
     private void CoyoteTime() {
         if (IsGrounded()) startCoyote = true;
         if (!coyote && startCoyote && !IsGrounded()) {
@@ -65,13 +80,19 @@ public class PlayerMovement : MonoBehaviour
     private IEnumerator CoyoteWindow()
     {
         coyote = true;
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.05f);
         coyote = false;
     }
-
+    */
     private void HandleMovement()
     {
         float currentSpeed = IsGrounded() ? speed : speed * airSpeedCoef;
+        
+
+        if (IsGrounded())
+        {
+            PSA.SetWalkAnimation();
+        }
 
         Vector2 vel = rb.linearVelocity;
         vel.x = moveInput.x * currentSpeed;
@@ -80,12 +101,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void HandleJumpAndGravity()
     {
-        CoyoteTime();
+        //CoyoteTime();
         if (jumpRequest && (IsGrounded() || coyote))
         {
             Vector2 vel = rb.linearVelocity;
             vel.y = jumpForce; // rb.AddForce(Vector2.up * jumpForce, ForceMode2D.Impulse);
             rb.linearVelocity = vel;
+            PSA.SetJumpAnimation();
         }
         jumpRequest = false;
 
@@ -99,19 +121,6 @@ public class PlayerMovement : MonoBehaviour
         rb.linearVelocity = new Vector2(clampedX, clampedY);
     }
 
-    /*private void FlipSprite()
-    {
-        if (moveInput.x < 0f)
-        {
-            direction = -1;
-            sprite.transform.localRotation = Quaternion.Euler(0f, 180f, 0f);
-        }
-        else if (moveInput.x > 0f)
-        {
-            direction = 1;
-            transform.localRotation = Quaternion.Euler(0f, 0f, 0f);
-        }
-    }*/
 
     public bool IsGrounded()
     {
@@ -134,6 +143,26 @@ public class PlayerMovement : MonoBehaviour
         }
 
         return false;
+    }
+
+    private void UpdateAnimations()
+    {
+        bool grounded = IsGrounded();
+        bool moving = Mathf.Abs(rb.linearVelocity.x) > 0.1f || Mathf.Abs(moveInput.x) > 0.1f;
+
+        if (!grounded)
+        {
+            PSA.SetJumpAnimation();
+            return;
+        }
+
+        if (grounded)
+        {
+            if (moving)
+                PSA.SetWalkAnimation();
+            else
+                PSA.SetIdleAnimation();
+        }
     }
 
     public void StopMovement()

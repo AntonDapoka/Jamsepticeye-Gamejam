@@ -1,12 +1,11 @@
 using UnityEngine;
 
 [RequireComponent(typeof(CapsuleCollider2D))]
-[RequireComponent(typeof(Animator))]
 public class GhostMovement : MonoBehaviour
 {
     [Header("Components")]
     private Rigidbody2D rb;
-    private Animator anim;
+    [SerializeField] private GhostSpriteAnimation GSA;
 
     [Header("Movement Settings")]
     [SerializeField] private float acceleration = 20f; 
@@ -17,7 +16,6 @@ public class GhostMovement : MonoBehaviour
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        anim = GetComponent<Animator>();
         rb.gravityScale = 0f;
     }
 
@@ -32,6 +30,15 @@ public class GhostMovement : MonoBehaviour
         if (Input.GetKey(KeyCode.W)) vertical = 1f;
         if (Input.GetKey(KeyCode.S)) vertical = -1f;
         moveInput.y = vertical;
+
+        if (Input.GetAxis("Horizontal") < 0)
+        {
+            GSA.FlipSprite(1);
+        }
+        if (Input.GetAxis("Horizontal") > 0)
+        {
+            GSA.FlipSprite(-1);
+        }
 
         moveInput = moveInput.normalized;
     }

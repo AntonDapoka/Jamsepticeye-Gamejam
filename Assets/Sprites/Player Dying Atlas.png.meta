@@ -1,0 +1,911 @@
+fileFormatVersion: 2
+guid: 5776cde5e9ff8bc4a9491e408a56c4b6
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3531301497269187066
+    second: Player Dying Atlas_0
+  - first:
+      213: -6767993437191999295
+    second: Player Dying Atlas_1
+  - first:
+      213: -7515193010721175261
+    second: Player Dying Atlas_2
+  - first:
+      213: -1331777858863519113
+    second: Player Dying Atlas_3
+  - first:
+      213: 5756696786221402502
+    second: Player Dying Atlas_4
+  - first:
+      213: -7309401588673815109
+    second: Player Dying Atlas_5
+  - first:
+      213: -6954899594166360985
+    second: Player Dying Atlas_6
+  - first:
+      213: 8825509019837141474
+    second: Player Dying Atlas_7
+  - first:
+      213: 3625927890060080905
+    second: Player Dying Atlas_8
+  - first:
+      213: 2076945851109884676
+    second: Player Dying Atlas_9
+  - first:
+      213: 3515616007654850537
+    second: Player Dying Atlas_10
+  - first:
+      213: -2228895788815262616
+    second: Player Dying Atlas_11
+  - first:
+      213: 3694530884590532612
+    second: Player Dying Atlas_12
+  - first:
+      213: -5484918344519499366
+    second: Player Dying Atlas_13
+  - first:
+      213: -225333968495535723
+    second: Player Dying Atlas_14
+  - first:
+      213: 7247696840943433874
+    second: Player Dying Atlas_15
+  - first:
+      213: 114213920644761243
+    second: Player Dying Atlas_16
+  - first:
+      213: 114586893830103029
+    second: Player Dying Atlas_17
+  - first:
+      213: 1307498178080542761
+    second: Player Dying Atlas_18
+  - first:
+      213: 5598422927232560690
+    second: Player Dying Atlas_19
+  - first:
+      213: -8718025061955368008
+    second: Player Dying Atlas_20
+  - first:
+      213: 1678903243497374100
+    second: Player Dying Atlas_21
+  - first:
+      213: 4024052340818441878
+    second: Player Dying Atlas_22
+  - first:
+      213: 599482333104837976
+    second: Player Dying Atlas_23
+  - first:
+      213: 8869444289508037682
+    second: Player Dying Atlas_24
+  - first:
+      213: -4831274869216111511
+    second: Player Dying Atlas_25
+  - first:
+      213: -7240263655213041064
+    second: Player Dying Atlas_26
+  - first:
+      213: -1710376389958835931
+    second: Player Dying Atlas_27
+  - first:
+      213: -6431077599682092307
+    second: Player Dying Atlas_28
+  - first:
+      213: 2309113981243797159
+    second: Player Dying Atlas_29
+  - first:
+      213: -1195296746514904402
+    second: Player Dying Atlas_30
+  - first:
+      213: 5668810942478437732
+    second: Player Dying Atlas_31
+  - first:
+      213: -4942969574252054028
+    second: Player Dying Atlas_32
+  - first:
+      213: 6684497793921511416
+    second: Player Dying Atlas_33
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: 12
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Player Dying Atlas_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 841
+        width: 177
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: af1f88b8004b10130800000000000000
+      internalID: 3531301497269187066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Dying Atlas_1
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 841
+        width: 177
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c0fef5c3d14312a0800000000000000
+      internalID: -6767993437191999295
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Dying Atlas_2
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 841
+        width: 177
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 329477126cba4b790800000000000000
+      internalID: -7515193010721175261
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Dying Atlas_3
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 841
+        width: 177
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 77aa5bae713948de0800000000000000
+      internalID: -1331777858863519113
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Dying Atlas_4
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 841
+        width: 177
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6890c5e0a35e3ef40800000000000000
+      internalID: 5756696786221402502
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Dying Atlas_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 682
+        width: 177
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbddb626bf9cf8a90800000000000000
+      internalID: -7309401588673815109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Dying Atlas_6
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 682
+        width: 177
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 764a431faab3b7f90800000000000000
+      internalID: -6954899594166360985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Dying Atlas_7
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 682
+        width: 177
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2e11669a1b18a7a70800000000000000
+      internalID: 8825509019837141474
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Dying Atlas_8
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 682
+        width: 177
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 907763c7432e15230800000000000000
+      internalID: 3625927890060080905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Dying Atlas_9
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 682
+        width: 177
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40340295f3bc2dc10800000000000000
+      internalID: 2076945851109884676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Dying Atlas_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 523
+        width: 177
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9efb1f6e12af9c030800000000000000
+      internalID: 3515616007654850537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Dying Atlas_11
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 523
+        width: 177
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 86c5d4ad61f5111e0800000000000000
+      internalID: -2228895788815262616
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Dying Atlas_12
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 523
+        width: 177
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4087abbd34c954330800000000000000
+      internalID: 3694530884590532612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Dying Atlas_13
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 523
+        width: 177
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a9144e473d7a1e3b0800000000000000
+      internalID: -5484918344519499366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Dying Atlas_14
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 523
+        width: 177
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5999ef313f37fdcf0800000000000000
+      internalID: -225333968495535723
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Dying Atlas_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 364
+        width: 177
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 298772c70edf49460800000000000000
+      internalID: 7247696840943433874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Dying Atlas_16
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 364
+        width: 177
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b968f68a4f4c59100800000000000000
+      internalID: 114213920644761243
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Dying Atlas_17
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 364
+        width: 177
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ff98ae3c28179100800000000000000
+      internalID: 114586893830103029
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Dying Atlas_18
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 364
+        width: 177
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 92016f06aaa252210800000000000000
+      internalID: 1307498178080542761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Dying Atlas_19
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 364
+        width: 177
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23e69189df791bd40800000000000000
+      internalID: 5598422927232560690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Dying Atlas_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 205
+        width: 177
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bb823f656a530780800000000000000
+      internalID: -8718025061955368008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Dying Atlas_21
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 205
+        width: 177
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 49189e0da99ac4710800000000000000
+      internalID: 1678903243497374100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Dying Atlas_22
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 205
+        width: 177
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 696ff0c984e48d730800000000000000
+      internalID: 4024052340818441878
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Dying Atlas_23
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 205
+        width: 177
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85516d9710ac15800800000000000000
+      internalID: 599482333104837976
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Dying Atlas_24
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 205
+        width: 177
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2345e37c698961b70800000000000000
+      internalID: 8869444289508037682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Dying Atlas_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 46
+        width: 177
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9641a188a1dd3fcb0800000000000000
+      internalID: -4831274869216111511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Dying Atlas_26
+      rect:
+        serializedVersion: 2
+        x: 177
+        y: 46
+        width: 177
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 85afadee09a658b90800000000000000
+      internalID: -7240263655213041064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Dying Atlas_27
+      rect:
+        serializedVersion: 2
+        x: 354
+        y: 46
+        width: 177
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 521e94c3cb58348e0800000000000000
+      internalID: -1710376389958835931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Dying Atlas_28
+      rect:
+        serializedVersion: 2
+        x: 531
+        y: 46
+        width: 177
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de22af31ff830c6a0800000000000000
+      internalID: -6431077599682092307
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Dying Atlas_29
+      rect:
+        serializedVersion: 2
+        x: 708
+        y: 46
+        width: 177
+        height: 159
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7aeace58eee9b0020800000000000000
+      internalID: 2309113981243797159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 23b9ede1ef5fa694b9274746e5fbc9d9
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":177.0,"y":159.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Player Dying Atlas_0: 3531301497269187066
+      Player Dying Atlas_1: -6767993437191999295
+      Player Dying Atlas_10: 3515616007654850537
+      Player Dying Atlas_11: -2228895788815262616
+      Player Dying Atlas_12: 3694530884590532612
+      Player Dying Atlas_13: -5484918344519499366
+      Player Dying Atlas_14: -225333968495535723
+      Player Dying Atlas_15: 7247696840943433874
+      Player Dying Atlas_16: 114213920644761243
+      Player Dying Atlas_17: 114586893830103029
+      Player Dying Atlas_18: 1307498178080542761
+      Player Dying Atlas_19: 5598422927232560690
+      Player Dying Atlas_2: -7515193010721175261
+      Player Dying Atlas_20: -8718025061955368008
+      Player Dying Atlas_21: 1678903243497374100
+      Player Dying Atlas_22: 4024052340818441878
+      Player Dying Atlas_23: 599482333104837976
+      Player Dying Atlas_24: 8869444289508037682
+      Player Dying Atlas_25: -4831274869216111511
+      Player Dying Atlas_26: -7240263655213041064
+      Player Dying Atlas_27: -1710376389958835931
+      Player Dying Atlas_28: -6431077599682092307
+      Player Dying Atlas_29: 2309113981243797159
+      Player Dying Atlas_3: -1331777858863519113
+      Player Dying Atlas_4: 5756696786221402502
+      Player Dying Atlas_5: -7309401588673815109
+      Player Dying Atlas_6: -6954899594166360985
+      Player Dying Atlas_7: 8825509019837141474
+      Player Dying Atlas_8: 3625927890060080905
+      Player Dying Atlas_9: 2076945851109884676
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,743 @@
+fileFormatVersion: 2
+guid: 1f71f0902bd4e5b4281d7961473a4494
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -5809320959378753128
+    second: Player Jumping Atlas_0
+  - first:
+      213: 3895329563883848371
+    second: Player Jumping Atlas_1
+  - first:
+      213: -1793436966135651809
+    second: Player Jumping Atlas_2
+  - first:
+      213: -3750287045397437651
+    second: Player Jumping Atlas_3
+  - first:
+      213: 7863776208476935020
+    second: Player Jumping Atlas_4
+  - first:
+      213: 5013062427457934879
+    second: Player Jumping Atlas_5
+  - first:
+      213: 8358856613756974644
+    second: Player Jumping Atlas_6
+  - first:
+      213: 6793261891210295125
+    second: Player Jumping Atlas_7
+  - first:
+      213: -561327582654729138
+    second: Player Jumping Atlas_8
+  - first:
+      213: 4485399043087817711
+    second: Player Jumping Atlas_9
+  - first:
+      213: 7862821527106242707
+    second: Player Jumping Atlas_10
+  - first:
+      213: 1905012444254065061
+    second: Player Jumping Atlas_11
+  - first:
+      213: 7347337214382169657
+    second: Player Jumping Atlas_12
+  - first:
+      213: -7695484340267718434
+    second: Player Jumping Atlas_13
+  - first:
+      213: -4820257546949804915
+    second: Player Jumping Atlas_14
+  - first:
+      213: -1732838955252686130
+    second: Player Jumping Atlas_15
+  - first:
+      213: 2715400287465964742
+    second: Player Jumping Atlas_16
+  - first:
+      213: -3442273924696892028
+    second: Player Jumping Atlas_17
+  - first:
+      213: 3675420875244697690
+    second: Player Jumping Atlas_18
+  - first:
+      213: 5851886666144455982
+    second: Player Jumping Atlas_19
+  - first:
+      213: -4718750431125596736
+    second: Player Jumping Atlas_20
+  - first:
+      213: 3399425256188081630
+    second: Player Jumping Atlas_21
+  - first:
+      213: -6971230269641759572
+    second: Player Jumping Atlas_22
+  - first:
+      213: -790602003496997306
+    second: Player Jumping Atlas_23
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 32
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 4096
+    resizeAlgorithm: 0
+    textureFormat: 12
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 1
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Player Jumping Atlas_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 857
+        width: 100
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8997ff5dd55216fa0800000000000000
+      internalID: -5809320959378753128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Jumping Atlas_1
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 857
+        width: 100
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3b2cf5a999dfe0630800000000000000
+      internalID: 3895329563883848371
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Jumping Atlas_2
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 857
+        width: 100
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f122e62d49e6c17e0800000000000000
+      internalID: -1793436966135651809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Jumping Atlas_3
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 857
+        width: 100
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2326555dcd44fbc0800000000000000
+      internalID: -3750287045397437651
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Jumping Atlas_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 714
+        width: 100
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c639f6b2cceb12d60800000000000000
+      internalID: 7863776208476935020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Jumping Atlas_5
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 714
+        width: 100
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f16dc79a7b9f19540800000000000000
+      internalID: 5013062427457934879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Jumping Atlas_6
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 714
+        width: 100
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 436b8679dcf900470800000000000000
+      internalID: 8358856613756974644
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Jumping Atlas_7
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 714
+        width: 100
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 557b9c3a2b3864e50800000000000000
+      internalID: 6793261891210295125
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Jumping Atlas_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 571
+        width: 100
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e447c31a983c538f0800000000000000
+      internalID: -561327582654729138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Jumping Atlas_9
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 571
+        width: 100
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: feb502f3aa65f3e30800000000000000
+      internalID: 4485399043087817711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Jumping Atlas_10
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 571
+        width: 100
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3984677158a5e1d60800000000000000
+      internalID: 7862821527106242707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Jumping Atlas_11
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 571
+        width: 100
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5a1567099b6ff6a10800000000000000
+      internalID: 1905012444254065061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Jumping Atlas_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 428
+        width: 100
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93ed144c44cf6f560800000000000000
+      internalID: 7347337214382169657
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Jumping Atlas_13
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 428
+        width: 100
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed8e2c3d3c5243590800000000000000
+      internalID: -7695484340267718434
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Jumping Atlas_14
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 428
+        width: 100
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8c3924cc410b1db0800000000000000
+      internalID: -4820257546949804915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Jumping Atlas_15
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 428
+        width: 100
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec26433b628b3f7e0800000000000000
+      internalID: -1732838955252686130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Jumping Atlas_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 285
+        width: 100
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6c40765bc2a0fa520800000000000000
+      internalID: 2715400287465964742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Jumping Atlas_17
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 285
+        width: 100
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48d1ada7a169a30d0800000000000000
+      internalID: -3442273924696892028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Jumping Atlas_18
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 285
+        width: 100
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a58f30510d7b10330800000000000000
+      internalID: 3675420875244697690
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Jumping Atlas_19
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 285
+        width: 100
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e2d92611be3163150800000000000000
+      internalID: 5851886666144455982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Jumping Atlas_20
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 142
+        width: 100
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c59901eb71a38eb0800000000000000
+      internalID: -4718750431125596736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Jumping Atlas_21
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 142
+        width: 100
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed5f493724f2d2f20800000000000000
+      internalID: 3399425256188081630
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Jumping Atlas_22
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 142
+        width: 100
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca46d824107314f90800000000000000
+      internalID: -6971230269641759572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Player Jumping Atlas_23
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 142
+        width: 100
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 64e69d6aaa73705f0800000000000000
+      internalID: -790602003496997306
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: c176715b9f3ff5e4e880c0e80b5f2a90
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":100.0,"y":143.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Player Jumping Atlas_0: -5809320959378753128
+      Player Jumping Atlas_1: 3895329563883848371
+      Player Jumping Atlas_10: 7862821527106242707
+      Player Jumping Atlas_11: 1905012444254065061
+      Player Jumping Atlas_12: 7347337214382169657
+      Player Jumping Atlas_13: -7695484340267718434
+      Player Jumping Atlas_14: -4820257546949804915
+      Player Jumping Atlas_15: -1732838955252686130
+      Player Jumping Atlas_16: 2715400287465964742
+      Player Jumping Atlas_17: -3442273924696892028
+      Player Jumping Atlas_18: 3675420875244697690
+      Player Jumping Atlas_19: 5851886666144455982
+      Player Jumping Atlas_2: -1793436966135651809
+      Player Jumping Atlas_20: -4718750431125596736
+      Player Jumping Atlas_21: 3399425256188081630
+      Player Jumping Atlas_22: -6971230269641759572
+      Player Jumping Atlas_23: -790602003496997306
+      Player Jumping Atlas_3: -3750287045397437651
+      Player Jumping Atlas_4: 7863776208476935020
+      Player Jumping Atlas_5: 5013062427457934879
+      Player Jumping Atlas_6: 8358856613756974644
+      Player Jumping Atlas_7: 6793261891210295125
+      Player Jumping Atlas_8: -561327582654729138
+      Player Jumping Atlas_9: 4485399043087817711
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

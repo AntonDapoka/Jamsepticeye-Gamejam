@@ -8,6 +8,8 @@ public class MovementSwitcher : MonoBehaviour
     [SerializeField] private GameObject ghost;
     [SerializeField] private GhostSwitchCollider ghostSwitchCollider;
     [SerializeField] private GhostPassableEnviromentSwitcher enviromentSwitcher;
+    [SerializeField] private PlayerSpriteAnimation PSA;
+    [SerializeField] private GhostSpriteAnimation GSA;
 
     [Header("Controls")]
     [SerializeField] private KeyCode switchKey = KeyCode.E;
@@ -86,7 +88,7 @@ public class MovementSwitcher : MonoBehaviour
     private void EnterGhost()
     {
         isGhost = true;
-
+        ghost.SetActive(true);
 
         if (playerMovement != null) playerMovement.enabled = false;
         if (ghostMovement != null) ghostMovement.enabled = true;
@@ -95,6 +97,7 @@ public class MovementSwitcher : MonoBehaviour
         if (ghost != null) ghost.transform.SetParent(null);
 
         playerMovement.StopMovement();
+        PSA.SetDeathAnimation();
 
         if (ghostCollider != null) { ghostCollider.enabled = true; ghostCollider.isTrigger = false; }
         //if (playerCollider != null) playerCollider.isTrigger = true;
@@ -129,6 +132,7 @@ public class MovementSwitcher : MonoBehaviour
         //if (playerRb != null) playerRb.gravityScale = playerGravityScale;
 
         enviromentSwitcher?.DisableGhostMode();
+        ghost.SetActive(false);
     }
 
     public void ForceEnterGhost() => EnterGhost();

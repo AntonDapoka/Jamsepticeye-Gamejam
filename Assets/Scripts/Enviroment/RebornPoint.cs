@@ -6,6 +6,7 @@ public class RebornPoint : MonoBehaviour
     [SerializeField] private Transform player;
     [SerializeField] private Transform ghost;
     [SerializeField] private MovementSwitcher MS;
+    [SerializeField] private GameObject hint;
     [Header("Controls")]
     [SerializeField] private KeyCode switchKey = KeyCode.T;
     private bool isOnTriggerEnterGhost = false;
@@ -13,6 +14,7 @@ public class RebornPoint : MonoBehaviour
     private void Awake()
     {
         gameObject.GetComponent<CircleCollider2D>().isTrigger = true;
+        hint.SetActive(false);
     }
 
     private void Update()
@@ -28,6 +30,7 @@ public class RebornPoint : MonoBehaviour
         if (other.GetComponent<GhostSwitchCollider>() != null)
         {
             isOnTriggerEnterGhost = true;
+            if (hint != null) hint.SetActive(true);
         }
     }
 
@@ -36,6 +39,7 @@ public class RebornPoint : MonoBehaviour
         if (other.GetComponent<GhostSwitchCollider>() != null)
         {
             isOnTriggerEnterGhost = false;
+            if (hint != null) hint.SetActive(false);
         }
     }
 
