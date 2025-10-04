@@ -7,6 +7,7 @@ public class MovementSwitcher : MonoBehaviour
     [SerializeField] private GameObject player;
     [SerializeField] private GameObject ghost;
     [SerializeField] private GhostSwitchCollider ghostSwitchCollider;
+    [SerializeField] private PlayerSwitchCollider playerswitchcol;
     [SerializeField] private GhostPassableEnviromentSwitcher enviromentSwitcher;
     [SerializeField] private PlayerSpriteAnimation PSA;
     [SerializeField] private GhostSpriteAnimation GSA;
@@ -25,6 +26,7 @@ public class MovementSwitcher : MonoBehaviour
     static (float, float) var = (0, 0);
     private (float,float)[] speed = {var, var};
     public LayerMask Lava;
+    private bool facingRight = true;
 
     private bool isGhost = false;
     //private float playerGravityScale;
@@ -105,7 +107,10 @@ public class MovementSwitcher : MonoBehaviour
         //if (playerRb != null) playerRb.gravityScale = 0f;
 
         enviromentSwitcher?.EnableGhostMode();
-        ghostRb.AddForce(new Vector2(speed[1].Item1*30, speed[1].Item2*25+150f)); 
+        ghostRb.AddForce(new Vector2(speed[1].Item1*30, speed[1].Item2*25+150f));
+
+        playerswitchcol.transform.rotation = Quaternion.Euler(0f, 0f, 90f);
+        playerswitchcol.transform.position = new Vector3(playerswitchcol.transform.position.x + (PlayerMovement.facingRight? 1f:-1f), playerswitchcol.transform.position.y - 1f, 0f);
     }
 
     public void ExitGhost()
@@ -133,6 +138,9 @@ public class MovementSwitcher : MonoBehaviour
 
         enviromentSwitcher?.DisableGhostMode();
         ghost.SetActive(false);
+
+        playerswitchcol.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
+        playerswitchcol.transform.position = new Vector3(playerswitchcol.transform.position.x - (PlayerMovement.facingRight ? 1f : -1f), playerswitchcol.transform.position.y + 1f, 0f);
     }
 
     public void ForceEnterGhost() => EnterGhost();
