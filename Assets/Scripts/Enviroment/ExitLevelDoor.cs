@@ -5,6 +5,7 @@ public class ExitLevelDoor : MonoBehaviour
 {
     [SerializeField] private GameObject hint;
     [SerializeField] private LevelManager LM;
+    [SerializeField] private MovementSwitcher MS;
     [SerializeField] private bool isOnTriggerEnterPlayer = false;
     [SerializeField] private KeyCode switchKey = KeyCode.T;
 
@@ -15,7 +16,7 @@ public class ExitLevelDoor : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetKeyDown(switchKey) && isOnTriggerEnterPlayer)
+        if (Input.GetKeyDown(switchKey) && isOnTriggerEnterPlayer && !MS.GetIsGhost())
         {
             ExitLevel();
         }

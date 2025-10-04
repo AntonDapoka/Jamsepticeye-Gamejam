@@ -143,6 +143,7 @@ public class MovementSwitcher : MonoBehaviour
         playerswitchcol.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
         playerswitchcol.transform.position = new Vector3(playerswitchcol.transform.position.x - (PlayerMovement.facingRight ? 1f : -1f), playerswitchcol.transform.position.y + 1f, 0f);
     }
+    public bool GetIsGhost() {  return isGhost; }
 
     public void ForceEnterGhost() => EnterGhost();
     public void ForceExitGhost() => ExitGhost();
