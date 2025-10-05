@@ -147,7 +147,8 @@ public class MovementSwitcher : MonoBehaviour
         playerswitchcol.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
         playerswitchcol.transform.position = new Vector3(playerswitchcol.transform.position.x - (PlayerMovement.facingRight ? 1f : -1f), playerswitchcol.transform.position.y + 1f, 0f);
         playerCollider.direction = CapsuleDirection2D.Vertical;
-        playerCollider.size = new Vector2(1f, 2f);
+        playerCollider.size = new Vector2(1f, 3f);
+        playerCollider.offset = new Vector2(0,0);
     }
 
     public void ForceEnterGhost() => EnterGhost();
