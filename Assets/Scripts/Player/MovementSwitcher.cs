@@ -11,6 +11,7 @@ public class MovementSwitcher : MonoBehaviour
     [SerializeField] private GhostPassableEnviromentSwitcher enviromentSwitcher;
     [SerializeField] private PlayerSpriteAnimation PSA;
     [SerializeField] private GhostSpriteAnimation GSA;
+    //[SerializeField] private CapsuleCollider2D playerCollider2;
 
     [Header("Controls")]
     [SerializeField] private KeyCode switchKey = KeyCode.E;
@@ -111,6 +112,10 @@ public class MovementSwitcher : MonoBehaviour
 
         playerswitchcol.transform.rotation = Quaternion.Euler(0f, 0f, 90f);
         playerswitchcol.transform.position = new Vector3(playerswitchcol.transform.position.x + (PlayerMovement.facingRight? 1f:-1f), playerswitchcol.transform.position.y - 1f, 0f);
+        playerCollider.direction = CapsuleDirection2D.Horizontal;
+        playerCollider.size = new Vector2(3.45f, 1f);
+        playerCollider.offset = new Vector2((PlayerMovement.facingRight ? 1f : -1f), -1f);
+        
     }
 
     public void ExitGhost()
@@ -141,6 +146,8 @@ public class MovementSwitcher : MonoBehaviour
 
         playerswitchcol.transform.rotation = Quaternion.Euler(0f, 0f, 0f);
         playerswitchcol.transform.position = new Vector3(playerswitchcol.transform.position.x - (PlayerMovement.facingRight ? 1f : -1f), playerswitchcol.transform.position.y + 1f, 0f);
+        playerCollider.direction = CapsuleDirection2D.Vertical;
+        playerCollider.size = new Vector2(1f, 2f);
     }
 
     public void ForceEnterGhost() => EnterGhost();
