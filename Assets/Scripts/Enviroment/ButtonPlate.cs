@@ -3,8 +3,8 @@ using UnityEngine;
 public class ButtonPlate : MonoBehaviour
 {
     public GameObject[] gameobjects;
-    private bool isActivatedByPlayer = false;
-    private bool isActivatedByBox = false;
+    public bool isActivatedByPlayer = false;
+    public bool isActivatedByBox = false;
     [SerializeField] private Sprite spriteActive;
     [SerializeField] private Sprite spriteNotActive;
     [SerializeField] bool isInitiallyActivated = false;
@@ -31,7 +31,8 @@ public class ButtonPlate : MonoBehaviour
         {
             foreach (GameObject obj in gameobjects)
             {
-                obj.SetActive(isInitiallyActivated);
+                if (obj != null)
+                    obj.SetActive(isInitiallyActivated);
                 gameObject.GetComponent<SpriteRenderer>().sprite = spriteNotActive;
             }
         }
@@ -39,7 +40,8 @@ public class ButtonPlate : MonoBehaviour
         {
             foreach (GameObject obj in gameobjects)
             {
-                obj.SetActive(!isInitiallyActivated);
+                if (obj != null)
+                    obj.SetActive(!isInitiallyActivated);
                 gameObject.GetComponent<SpriteRenderer>().sprite = spriteActive;
             }
         }

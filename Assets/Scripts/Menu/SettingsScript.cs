@@ -47,6 +47,7 @@ public class SettingsScript : MonoBehaviour
 
     private void Awake()
     {
+        //Screen.SetResolution(1920, 1080, false);
         string path = Application.persistentDataPath + relativePath;
         Debug.Log(path);
 
@@ -95,6 +96,7 @@ public class SettingsScript : MonoBehaviour
 
         dropDownResolution.AddOptions(options);
         dropDownResolution.RefreshShownValue();
+        //Screen.SetResolution(1920, 1080, false);
     }
 
     public void SetFullscreen(bool isFullscreen)

@@ -1407,7 +1407,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d3cc73b8589b6e45915fead0effd732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Lever
-  thirdObject: {fileID: 0}
+  objects: []
+  spriteActive: {fileID: 0}
+  spriteNotActive: {fileID: 0}
   interactKey: 101
   isOnTriggerEnterGhost: 0
 --- !u!61 &250990996
@@ -1983,7 +1985,7 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &368082227 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 5483095042675966663, guid: 55efc7b6cce31234186c7372d553ef3d,
+  m_CorrespondingSourceObject: {fileID: 4623768208806015652, guid: 55efc7b6cce31234186c7372d553ef3d,
     type: 3}
   m_PrefabInstance: {fileID: 813561142706816324}
   m_PrefabAsset: {fileID: 0}
@@ -2068,7 +2070,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d3cc73b8589b6e45915fead0effd732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Lever
-  thirdObject: {fileID: 0}
+  objects: []
+  spriteActive: {fileID: 0}
+  spriteNotActive: {fileID: 0}
   interactKey: 101
   isOnTriggerEnterGhost: 0
 --- !u!61 &427208955
@@ -2546,6 +2550,9 @@ MonoBehaviour:
   Lava:
     serializedVersion: 2
     m_Bits: 4096
+  Spikes:
+    serializedVersion: 2
+    m_Bits: 8192
 --- !u!1 &568471752
 GameObject:
   m_ObjectHideFlags: 0
@@ -3470,6 +3477,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ExitLevelDoor
   hint: {fileID: 0}
   LM: {fileID: 0}
+  MS: {fileID: 0}
   isOnTriggerEnterPlayer: 0
   switchKey: 116
 --- !u!1 &757507555
@@ -8249,7 +8257,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d3cc73b8589b6e45915fead0effd732, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Lever
-  thirdObject: {fileID: 0}
+  objects: []
+  spriteActive: {fileID: 0}
+  spriteNotActive: {fileID: 0}
   interactKey: 101
   isOnTriggerEnterGhost: 0
 --- !u!61 &1423470169
@@ -9189,7 +9199,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 17f87588a9ce0f142bc9b13f26342cbc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonPlate
-  gameobject: {fileID: 532357626}
+  gameobjects: []
+  spriteActive: {fileID: 0}
+  spriteNotActive: {fileID: 0}
+  isInitiallyActivated: 0
 --- !u!1 &1655842904
 GameObject:
   m_ObjectHideFlags: 0

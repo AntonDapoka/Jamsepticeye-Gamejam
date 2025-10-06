@@ -7,7 +7,7 @@ public class Lever : MonoBehaviour
     [SerializeField] private Sprite spriteNotActive;
     [SerializeField] private KeyCode interactKey = KeyCode.E;
     [SerializeField] private bool isOnTriggerEnterGhost = false;
-    private bool isActivated = false;
+    public bool isActivated = false;
 
     private void OnTriggerEnter2D(Collider2D other)
     {

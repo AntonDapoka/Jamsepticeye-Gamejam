@@ -39,8 +39,10 @@ public class LevelManager : MonoBehaviour
 
         currentLevel++;
 
-        if (currentLevel == 3)
+        if (currentLevel == 4)
             background.sprite = background2;
+        if (currentLevel == 8)
+            background.sprite = background3;
 
         if (currentLevel < levels.Length)
         {
