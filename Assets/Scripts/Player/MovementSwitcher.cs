@@ -70,22 +70,25 @@ public class MovementSwitcher : MonoBehaviour
     {
         speed[1] = speed[0];
         speed[0].Item1 = playerRb.linearVelocityX; speed[0].Item2 = playerRb.linearVelocityY;
-        if (Input.GetKeyDown(switchKey) || (Physics2D.OverlapPoint(playerCollider.transform.position, Lava) && !isGhost) || (playerMovement.GetIsOnTriggerEnterSpikes() && !isGhost))
-            TryToggle();
+        HandleSwitch();
     }
 
-    private void TryToggle()
+    private void HandleSwitch()
     {
-        if (!isGhost)
-        {
-            EnterGhost();
-            return;
-        }
+        //if (Input.GetKeyDown(switchKey) || ( && !isGhost) || (playerMovement.GetIsOnTriggerEnterSpikes() && !isGhost))
+        //{
 
-        if (ghostSwitchCollider != null && ghostSwitchCollider.IsOnTriggerEnterPlayer())
-        {
-            ExitGhost();
-        }
+            if (!isGhost && (Physics2D.OverlapPoint(playerCollider.transform.position, Lava) || playerMovement.GetIsOnTriggerEnterSpikes()))
+            {
+                EnterGhost();
+                return;
+            }
+
+            if (ghostSwitchCollider != null && ghostSwitchCollider.IsOnTriggerEnterPlayer() && Input.GetKeyDown(switchKey))
+            {
+                ExitGhost();
+            }
+        //}
     }
 
     private void EnterGhost()

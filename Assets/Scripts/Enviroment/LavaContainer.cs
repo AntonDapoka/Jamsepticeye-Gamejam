@@ -8,6 +8,21 @@ public class LavaContainer : MonoBehaviour
     private void OnEnable()
     {
         lava.SetActive(false);
-        lavaInside.SetActive(true);
+        lavaInside.SetActive(false);
+    }
+
+    private void OnDisable()
+    {
+        lava.SetActive(true);
+        lavaInside.SetActive(false);
+    }
+
+    private void Update()
+    {
+        if (gameObject.activeSelf && lava.activeSelf)
+        {
+            lava.SetActive(false);
+            lavaInside.SetActive(true);
+        }
     }
 }

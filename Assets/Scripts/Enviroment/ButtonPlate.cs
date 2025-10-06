@@ -2,25 +2,59 @@ using UnityEngine;
 
 public class ButtonPlate : MonoBehaviour
 {
-    public GameObject gameobject;
+    public GameObject[] gameobjects;
+    private bool isActivatedByPlayer = false;
+    private bool isActivatedByBox = false;
+    [SerializeField] private Sprite spriteActive;
+    [SerializeField] private Sprite spriteNotActive;
+    [SerializeField] bool isInitiallyActivated = false;
 
     private void ActivateButton()
     {
-        //Debug.Log("Кнопка нажата!");
-        gameobject.SetActive(false);
+        foreach (GameObject obj in gameobjects)
+        {
+            obj.SetActive(false);
+        }
     }
 
     private void DisactivateButton()
     {
-        //Debug.Log("Кнопка нажата!");
-        gameobject.SetActive(true);
+        foreach (GameObject obj in gameobjects)
+        {
+            obj.SetActive(true);
+        }
+    }
+
+    private void Update()
+    {
+        if (!isActivatedByPlayer && !isActivatedByBox)
+        {
+            foreach (GameObject obj in gameobjects)
+            {
+                obj.SetActive(isInitiallyActivated);
+                gameObject.GetComponent<SpriteRenderer>().sprite = spriteNotActive;
+            }
+        }
+        if (isActivatedByBox || isActivatedByPlayer)
+        {
+            foreach (GameObject obj in gameobjects)
+            {
+                obj.SetActive(!isInitiallyActivated);
+                gameObject.GetComponent<SpriteRenderer>().sprite = spriteActive;
+            }
+        }
+
     }
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.GetComponent<PlayerSwitchCollider>() != null || other.gameObject.GetComponent<PlayerMovement>() != null)
+        if (other.gameObject.GetComponent<PlayerSwitchCollider>() != null || other.gameObject.GetComponent<PlayerMovement>() != null )
         {
-            ActivateButton();
+            isActivatedByPlayer = true;
+        }
+         if (other.gameObject.GetComponent<Box>() != null)
+        {
+            isActivatedByBox = true;
         }
     }
 
@@ -28,7 +62,35 @@ public class ButtonPlate : MonoBehaviour
     {
         if (other.gameObject.GetComponent<PlayerSwitchCollider>() != null || other.gameObject.GetComponent<PlayerMovement>() != null)
         {
-            DisactivateButton();
+            isActivatedByPlayer = false;
+        }
+        if (other.gameObject.GetComponent<Box>() != null)
+        {
+            isActivatedByBox = false;
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.GetComponent<PlayerSwitchCollider>() != null || other.gameObject.GetComponent<PlayerMovement>() != null)
+        {
+            isActivatedByPlayer = true;
+        }
+        if (other.gameObject.GetComponent<Box>() != null)
+        {
+            isActivatedByBox = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.gameObject.GetComponent<PlayerSwitchCollider>() != null || other.gameObject.GetComponent<PlayerMovement>() != null)
+        {
+            isActivatedByPlayer = false;
+        }
+        if (other.gameObject.GetComponent<Box>() != null)
+        {
+            isActivatedByBox = false;
         }
     }
 }

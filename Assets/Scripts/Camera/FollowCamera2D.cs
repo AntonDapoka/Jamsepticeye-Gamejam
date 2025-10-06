@@ -15,7 +15,7 @@ namespace CustomCamera
 
     public class FollowCamera2D : MonoBehaviour
     {
-                [SerializeField] private Camera camera;
+        [SerializeField] private Camera camera;
         [SerializeField] private Transform target;
         [SerializeField] private float dampTime = 0.15f;
         [SerializeField] private Direction followType = Direction.Horizontal;
@@ -25,17 +25,16 @@ namespace CustomCamera
         [Range(0.0f, 1.0f)]
         [SerializeField] private float cameraCenterY = 0.5f;
         [SerializeField] private Direction boundType = Direction.None;
-        [SerializeField] private float leftBound = 0;
-        [SerializeField] private float rightBound = 0;
-        [SerializeField] private float upperBound = 0;
-        [SerializeField] private float lowerBound = 0;
+        public float leftBound = 0;
+        public float rightBound = 0;
+        public float upperBound = 0;
+        public float lowerBound = 0;
         [SerializeField] private Direction deadZoneType = Direction.None;
         [SerializeField] private bool hardDeadZone = false;
         [SerializeField] private float leftDeadBound = 0;
         [SerializeField] private float rightDeadBound = 0;
         [SerializeField] private float upperDeadBound = 0;
         [SerializeField] private float lowerDeadBound = 0;
-
 
         private Vector3 velocity = Vector3.zero;
         private float vertExtent;
@@ -48,6 +47,7 @@ namespace CustomCamera
         private bool isDeadZoneHorizontal;
         private bool isDeadZoneVertical;
         private Vector3 deltaCenterVec;
+
 
         private void Start()
         {
@@ -65,6 +65,8 @@ namespace CustomCamera
             isDeadZoneHorizontal = ((deadZoneType & Direction.Horizontal) == Direction.Horizontal) && isFollowHorizontal;
             isDeadZoneVertical = ((deadZoneType & Direction.Vertical) == Direction.Vertical) && isFollowVertical;
             tempVec = Vector3.one;
+
+
         }
 
         private void LateUpdate()
@@ -135,5 +137,7 @@ namespace CustomCamera
             }
         }
     }
+
+
 
 }
